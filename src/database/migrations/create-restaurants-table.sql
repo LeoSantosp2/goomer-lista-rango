@@ -3,6 +3,7 @@ CREATE TABLE IF NOT EXISTS restaurants_table(
   restaurant_name varchar(255) NOT NULL,
   restaurant_address varchar(255) NOT NULL,
   opening_hours varchar(255) NOT NULL,
+  restaurant_photo varchar(255),
   created_at DATETIME DEFAULT now() NOT NULL,
   updated_at DATETIME DEFAULT now() on update now() NOT NULL
 )
