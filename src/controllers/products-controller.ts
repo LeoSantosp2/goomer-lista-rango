@@ -3,16 +3,60 @@ import { v4 } from 'uuid';
 
 import knex from '../config/knex';
 
+import { weekDay } from '../utils/week-day';
+
 class ProductsController {
   async index(req: Request, res: Response) {
     try {
-      const restaurantId = req.params.id;
+      const restaurantId = req.query.restaurant_id;
 
       const response = await knex.raw(
         `SELECT * FROM products_table WHERE restaurant_id = '${restaurantId}'`,
       );
 
       return res.json(response[0]);
+    } catch (err) {
+      if (err instanceof Error) {
+        return res.status(400).json({ error: err.message });
+      }
+    }
+  }
+
+  async show(req: Request, res: Response) {
+    try {
+      const productId = req.query.product_id;
+
+      const product = await knex.raw(
+        `SELECT product_name, product_price, product_category FROM products_table WHERE id = '${productId}'`,
+      );
+
+      const discountProduct = await knex.raw(
+        `SELECT discount_description, discount_price, week_days, start_hour, end_hour FROM discounts_table WHERE product_id = '${productId}'`,
+      );
+
+      const newProduct = {
+        productName: product[0][0].product_name,
+        productPrice: product[0][0].product_price,
+        productCategory: product[0][0].product_category,
+        discountDescription:
+          discountProduct[0].length > 0
+            ? discountProduct[0][0].discount_description
+            : '',
+        discount_price:
+          discountProduct[0].length > 0
+            ? discountProduct[0][0].discount_price
+            : '',
+        weekDays:
+          discountProduct[0].length > 0
+            ? weekDay(discountProduct[0][0].week_days)
+            : '',
+        startHour:
+          discountProduct[0].length > 0 ? discountProduct[0][0].start_hour : '',
+        endHour:
+          discountProduct[0].length > 0 ? discountProduct[0][0].end_hour : '',
+      };
+
+      return res.json(newProduct);
     } catch (err) {
       if (err instanceof Error) {
         return res.status(400).json({ error: err.message });

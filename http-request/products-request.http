@@ -1,5 +1,9 @@
 // Show products a restaurant
-GET http://localhost:3000/products/3e37ee36-3088-42ad-ba33-5179f35355f3
+GET http://localhost:3000/products?restaurant_id=3e37ee36-3088-42ad-ba33-5179f35355f3
+
+###
+
+GET http://localhost:3000/products/3e37ee36-3088-42ad-ba33-5179f35355f3?product_id=731c5fe0-5235-46c7-9bb0-1ced500bebe9
 
 ###
 
@@ -8,8 +12,8 @@ POST http://localhost:3000/products/3e37ee36-3088-42ad-ba33-5179f35355f3
 content-Type: application/json
 
 {
-  "productName": "Guaraná Antartica",
-  "productPrice": 6.50,
+  "productName": "Coca Cola",
+  "productPrice": 7.50,
   "productCategory": "Refrigerantes",
   "productPhoto": "photo"
 }
@@ -17,7 +21,7 @@ content-Type: application/json
 ###
 
 // Update a product
-PUT http://localhost:3000/products/94bea903-6948-4762-80ef-87a951d96385
+PUT http://localhost:3000/products/535aee82-9c22-41a8-a552-543d683145cf
 content-Type: application/json
 
 {
@@ -30,4 +34,4 @@ content-Type: application/json
 ###
 
 // Delete a product
-DELETE http://localhost:3000/products/56460b91-ad44-488f-9da1-ad9f22b6d079
+DELETE http://localhost:3000/products/535aee82-9c22-41a8-a552-543d683145cf
