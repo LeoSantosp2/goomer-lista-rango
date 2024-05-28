@@ -1,7 +1,7 @@
 CREATE TABLE IF NOT EXISTS products_table(
   id varchar(255) NOT NULL PRIMARY KEY,
   product_name varchar(255) NOT NULL,
-  product_price varchar(255) NOT NULL,
+  product_price FLOAT NOT NULL,
   product_category varchar(255) NOT NULL,
   product_photo varchar(255),
   restaurant_id varchar(255) NOT NULL,
