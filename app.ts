@@ -1,6 +1,8 @@
 import express from 'express';
 import 'dotenv/config';
 
+import './src/database/run-migrations';
+
 class App {
   public app: express.Application;
 
