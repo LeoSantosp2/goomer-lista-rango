@@ -3,6 +3,8 @@ import 'dotenv/config';
 
 import './src/database/run-migrations';
 
+import restaurantsRouter from './src/routes/restaurants-route';
+
 class App {
   public app: express.Application;
 
@@ -17,7 +19,9 @@ class App {
     this.app.use(express.json());
   }
 
-  routes() {}
+  routes() {
+    this.app.use('/restaurants', restaurantsRouter);
+  }
 }
 
 export default new App().app;
