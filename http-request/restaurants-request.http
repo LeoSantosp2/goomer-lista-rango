@@ -1,0 +1,38 @@
+// Show all restaurants
+GET http://localhost:3000/restaurants
+
+###
+
+// Show a restaurant
+GET http://localhost:3000/restaurants/cbe210c0-908f-4326-9066-ed057f19f8aa
+
+###
+
+// Register a restaurant
+POST http://localhost:3000/restaurants
+content-Type: application/json
+
+{
+  "restaurantName": "Burger King",
+  "restaurantAddress": "Rua Marcos Travis N°54",
+  "openingHours": "De Segunda a sexta das 09H às 21H e de Sabádo a Domingo das 11H às 22H",
+  "restaurantPhoto": "photo"
+}
+
+###
+
+// Update datas a restaurant
+PUT http://localhost:3000/restaurants/a
+content-Type: application/json
+
+{
+  "restaurantName": "Burger King",
+  "restaurantAddress": "Rua Marcos Travis N°54",
+  "openingHours": "De Segunda a sexta das 09H às 21H e de Sabádo a Domingo das 11H às 22H",
+  "restaurantPhoto": "photo"
+}
+
+###
+
+// Delete a restaurant
+DELETE http://localhost:3000/restaurants/a
