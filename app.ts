@@ -4,6 +4,7 @@ import 'dotenv/config';
 import './src/database/run-migrations';
 
 import restaurantsRouter from './src/routes/restaurants-route';
+import productsRouter from './src/routes/products-route';
 
 class App {
   public app: express.Application;
@@ -21,6 +22,7 @@ class App {
 
   routes() {
     this.app.use('/restaurants', restaurantsRouter);
+    this.app.use('/products', productsRouter);
   }
 }
 
