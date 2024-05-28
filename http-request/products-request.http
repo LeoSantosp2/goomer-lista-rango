@@ -1,0 +1,33 @@
+// Show products a restaurant
+GET http://localhost:3000/products/3e37ee36-3088-42ad-ba33-5179f35355f3
+
+###
+
+// Resgiter a product
+POST http://localhost:3000/products/3e37ee36-3088-42ad-ba33-5179f35355f3
+content-Type: application/json
+
+{
+  "productName": "Guaraná Antartica",
+  "productPrice": 6.50,
+  "productCategory": "Refrigerantes",
+  "productPhoto": "photo"
+}
+
+###
+
+// Update a product
+PUT http://localhost:3000/products/94bea903-6948-4762-80ef-87a951d96385
+content-Type: application/json
+
+{
+  "productName": "Coca Cola",
+  "productPrice": 7.20,
+  "productCategory": "Refrigerantes",
+  "productPhoto": "photo"
+}
+
+###
+
+// Delete a product
+DELETE http://localhost:3000/products/56460b91-ad44-488f-9da1-ad9f22b6d079
