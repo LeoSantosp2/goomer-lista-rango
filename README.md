@@ -1,7 +1,7 @@
 # Goomer Lista Rango
 
 ## About
-This project, is a `Goomer challenge developer backend`. I finded this project in a repository on GitHub. The link of repository and challenger better:
+This project, is a `Goomer challenge developer backend`. I finded this project in a repository on GitHub. The link of repository and challenge below:
 
 - [Challengers Repository]()
 - [Goomer Repository]()
