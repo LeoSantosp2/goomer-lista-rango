@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon server.ts",
-    "test": "jest --watch"
+    "dev": "nodemon src/server.ts",
+    "start": "node dist/server.js",
+    "test": "jest --watch",
+    "build": "sucrase ./src -d ./dist --transforms imports,typescript"
   },
   "keywords": [],
   "author": "",
@@ -35,6 +37,7 @@
     "jest": "^29.7.0",
     "nodemon": "^3.1.1",
     "prettier": "^3.2.5",
+    "sucrase": "^3.35.0",
     "ts-loader": "^9.5.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5"
