@@ -8,7 +8,7 @@ class RestaurantsController {
     try {
       const response = await knex.raw('SELECT * FROM restaurants_table');
 
-      return res.json(response[0]);
+      return res.status(200).json(response[0]);
     } catch (err) {
       if (err instanceof Error) {
         return res.status(400).json({ error: err.message });
@@ -62,7 +62,7 @@ class RestaurantsController {
         `INSERT INTO restaurants_table (id, restaurant_name, restaurant_address, opening_hours, restaurant_photo) values('${v4()}', '${restaurantName}', '${restaurantAddress}', '${openingHours}', '${restaurantPhoto}')`,
       );
 
-      return res.json('Restaurante cadastrado com sucesso.');
+      return res.status(200).json('Restaurante cadastrado com sucesso.');
     } catch (err) {
       if (err instanceof Error) {
         return res.status(400).json({ error: err.message });
