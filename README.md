@@ -1,7 +1,7 @@
 # Goomer Lista Rango
 
 ## About
-This project, is a `Goomer challenge developer backend`. I finded this project in a repository on GitHub. The link of repository and challenge bellow:
+This project, is a `Goomer challenge developer backend`. I finded this project in a repository on GitHub. The link of repository and challenge below:
 
 - [Challengers Repository](https://github.com/CollabCodeTech/backend-challenges?tab=readme-ov-file)
 - [Goomer Repository](https://github.com/goomerdev/job-dev-backend-interview)
@@ -47,7 +47,7 @@ Or
 yarn add
 ```
 
-3. Create file with name `.env` and, insert the variables bellow:
+3. Create file with name `.env` and, insert the variables below:
 
 ```bash
 DATABASE=database_name
