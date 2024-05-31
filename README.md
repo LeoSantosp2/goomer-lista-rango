@@ -3,8 +3,8 @@
 ## About
 This project, is a `Goomer challenge developer backend`. I finded this project in a repository on GitHub. The link of repository and challenge bellow:
 
-- [Challengers Repository]()
-- [Goomer Repository]()
+- [Challengers Repository](https://github.com/CollabCodeTech/backend-challenges?tab=readme-ov-file)
+- [Goomer Repository](https://github.com/goomerdev/job-dev-backend-interview)
 
 ## Challanges and Improvements
 
@@ -167,7 +167,7 @@ With this route, you can `Create`, `Update` and `Delete` the discounts
 
 ### Examples
 
-### Create a discount
+### Create a discount:
 - POST `http://localhost:3000/discounts/product_id`
 
 In the body, go to the fields below:
@@ -182,7 +182,7 @@ In the body, go to the fields below:
 }
 ```
 
-### Updata a discount
+### Updata a discount:
 - PUT `http://localhost:3000/discounts/discounts_id?product_id=product_id`
 
 In the body, go to the fields below:
@@ -197,7 +197,7 @@ In the body, go to the fields below:
 }
 ```
 
-### Delete a discount
+### Delete a discount:
 - DELETE `http://localhost:3000/discounts/discount_id`
 
 ## Change the Production
