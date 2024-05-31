@@ -1,4 +1,5 @@
 import Knex from 'knex';
+import 'dotenv/config';
 
 import env from './env';
 
